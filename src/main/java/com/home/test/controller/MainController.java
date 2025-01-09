@@ -1,11 +1,14 @@
 package com.home.test.controller;
 
+import java.net.http.HttpRequest;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -77,5 +80,31 @@ public class MainController {
 
 		return list;
 
+	}
+	
+	@GetMapping("slide")
+	public String slide() {
+		
+		return "page/slide";
+	}
+	@GetMapping("slide_splide")
+	public String slide_splide() {
+		
+		return "page/slide_splide";
+	}
+	
+	@GetMapping("slide/list")
+	@ResponseBody
+	public List<String> slideList(){
+		List<String> list = new ArrayList<String>();
+		list.add("resources/static/img/01.jpg");
+		list.add("resources/static/img/02.jpg");
+		list.add("resources/static/img/03.jpg");
+		list.add("resources/static/img/04.jpg");
+		list.add("resources/static/img/05.jpg");
+	
+	
+		
+		return list;
 	}
 }
