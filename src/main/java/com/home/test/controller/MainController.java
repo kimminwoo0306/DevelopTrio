@@ -44,7 +44,7 @@ public class MainController {
 	@ResponseBody
 	public List<String> test() {
 		List<String> list = new ArrayList<String>();
-		System.out.println("tes ����");
+		System.out.println("tes test한글");
 
 		list.add("test");
 
