@@ -1,0 +1,11 @@
+# Maven
+target/
+
+# IntelliJ
+.idea/
+
+# Eclipse
+.classpath
+
+# Logs
+*.log
