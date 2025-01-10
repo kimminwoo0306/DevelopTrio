@@ -4,10 +4,12 @@
 
 <!DOCTYPE html>
 <html>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<jsp:include page="../common/header.jsp" />
+
 <style>
     .texttest{
    		width : 200px;
@@ -31,12 +33,6 @@
     }
   </style>
 </head>
-<%
-    // 현재 시간 가져오기
-    LocalDateTime now = LocalDateTime.now();
-    // 타임스탬프 포맷 (년월일시분초)
-    String timestamp = now.format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
-%>
 <body>
 	<input type="text" value="넘칠경우 표시됩니다아아아아아." class="texttest">
 	<br>
@@ -44,7 +40,7 @@
 		<label></label>
 	</div>
 	<input type="button" value="Home" onClick="location.href='/test'">
-	<script src="resources/static/js/ellipsis.js?ver=<%= timestamp %>"></script>
 	
 </body>
+<script src="resources/static/js/ellipsis.js"></script>
 </html>

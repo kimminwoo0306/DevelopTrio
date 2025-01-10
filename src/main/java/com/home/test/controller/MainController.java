@@ -47,7 +47,7 @@ public class MainController {
 	@ResponseBody
 	public List<String> test() {
 		List<String> list = new ArrayList<String>();
-		System.out.println("tes test한글");
+		System.out.println("tes test�븳湲�");
 
 		list.add("test");
 
@@ -107,5 +107,14 @@ public class MainController {
 	
 		
 		return list;
+	}
+	
+	
+	
+	@GetMapping("fileDownload")
+	public String fileDownload() {
+		
+		
+		return "page/fileDownload";
 	}
 }

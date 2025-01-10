@@ -6,6 +6,7 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
+<jsp:include page="../common/header.jsp" />
 <link href="resources/css/slide.css" rel="stylesheet" type="text/css">
 </head>
 <body>

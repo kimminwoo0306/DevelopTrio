@@ -1,14 +1,15 @@
 <%@page import="java.time.format.DateTimeFormatter"%>
 <%@page import="java.time.LocalDateTime"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>°Ë»ö Æû</title>
+    <title>ê²€ìƒ‰ í¼</title>
+
+<jsp:include page="../common/header.jsp" />
 <style>
 #autocomplete-list {
   border: 1px solid #ccc;
@@ -38,26 +39,26 @@
 
 .input-wrapper {
    display: inline-block;
-   width: 150px; /* ÇÊ¿äÇÑ ³Êºñ·Î ¼³Á¤ */
+   width: 150px; /* í•„ìš”í•œ ë„ˆë¹„ë¡œ ì„¤ì • */
    overflow: hidden;
 }
 
 .input-wrapper input {
-   width: 100%; /* ºÎ¸ğ ³Êºñ¿¡ ¸Â°Ô ¼³Á¤ */
-   white-space: nowrap; /* ÅØ½ºÆ®°¡ ÇÑ ÁÙ·Î Ç¥½ÃµÇµµ·Ï ¼³Á¤ */
-   overflow: hidden; /* ³ÑÄ£ ³»¿ëÀ» ¼û±è */
-   text-overflow: ellipsis; /* Àß¸° ºÎºĞ¿¡ '...' Ç¥½Ã */
-   border: 1px solid #ccc; /* ±âº» ½ºÅ¸ÀÏ */
+   width: 100%; /* ë¶€ëª¨ ë„ˆë¹„ì— ë§ê²Œ ì„¤ì • */
+   white-space: nowrap; /* í…ìŠ¤íŠ¸ê°€ í•œ ì¤„ë¡œ í‘œì‹œë˜ë„ë¡ ì„¤ì • */
+   overflow: hidden; /* ë„˜ì¹œ ë‚´ìš©ì„ ìˆ¨ê¹€ */
+   text-overflow: ellipsis; /* ì˜ë¦° ë¶€ë¶„ì— '...' í‘œì‹œ */
+   border: 1px solid #ccc; /* ê¸°ë³¸ ìŠ¤íƒ€ì¼ */
    padding: 5px;
    box-sizing: border-box;
-   cursor: pointer; /* ¸¶¿ì½º Æ÷ÀÎÅÍ º¯°æ */
+   cursor: pointer; /* ë§ˆìš°ìŠ¤ í¬ì¸í„° ë³€ê²½ */
 }
 </style>
 </head>
 <body>
-    <h2>°Ë»ö¾î ÀÚµ¿¿Ï¼º</h2>
+    <h2>ê²€ìƒ‰ì–´ ìë™ì™„ì„±</h2>
       <div style="position: relative; width: 300px;">
-        <input type="text" id="search-input" placeholder="°Ë»ö¾î ÀÔ·Â" style="width: 100%; padding: 10px;">
+        <input type="text" id="search-input" placeholder="ê²€ìƒ‰ì–´ ì…ë ¥" style="width: 100%; padding: 10px;">
         <div id="autocomplete-list"></div>
       </div>
       <br><br><br><br>

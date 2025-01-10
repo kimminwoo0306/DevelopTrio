@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+
+
+#header_body {
+	height: 100px;
+	background: gray;
+	margin-bottom: 10px;
+}
