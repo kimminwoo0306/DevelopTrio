@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', async function () {
-	
+
 
 	await $.ajax({
 		url: "slide/list",
