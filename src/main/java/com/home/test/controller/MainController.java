@@ -47,7 +47,7 @@ public class MainController {
 	@ResponseBody
 	public List<String> test() {
 		List<String> list = new ArrayList<String>();
-		System.out.println("tes test한글");
+		System.out.println("tes test�븳湲�");
 
 		list.add("test");
 
@@ -71,12 +71,12 @@ public class MainController {
 	public List<String> searchList() {
 		List<String> list = new ArrayList<String>();
 
-		list.add("텔레그램");
-		list.add("카카오톡");
-		list.add("트위터");
-		list.add("인스타그램");
-		list.add("페이스북");
-		list.add("라인");
+		list.add("�뀛�젅洹몃옩");
+		list.add("移댁뭅�삤�넚");
+		list.add("�듃�쐞�꽣");
+		list.add("�씤�뒪��洹몃옩");
+		list.add("�럹�씠�뒪遺�");
+		list.add("�씪�씤");
 
 		return list;
 
@@ -106,5 +106,14 @@ public class MainController {
 	
 		
 		return list;
+	}
+	
+	
+	
+	@GetMapping("fileDownload")
+	public String fileDownload() {
+		
+		
+		return "page/fileDownload";
 	}
 }

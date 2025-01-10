@@ -1,23 +1,36 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ page import="java.time.LocalDateTime, java.time.format.DateTimeFormatter" %>
     
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
-</head>
+
 <%
-    // ÇöÀç ½Ã°£ °¡Á®¿À±â
+    // í˜„ì¬ ì‹œê°„ ê°€ì ¸ì˜¤ê¸°
     LocalDateTime now = LocalDateTime.now();
-    // Å¸ÀÓ½ºÅÆÇÁ Æ÷¸Ë (³â¿ùÀÏ½ÃºĞÃÊ)
+    // íƒ€ì„ìŠ¤íƒ¬í”„ í¬ë§· (ë…„ì›”ì¼ì‹œë¶„ì´ˆ)
     String timestamp = now.format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
 %>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="resources/static/js/common/header.js?ver=<%= timestamp %>"></script>
+
+<link rel="stylesheet" href="resources/css/header.css">
+
+</head>
+
 <body>
-	<input type="button" value="Home" onClick="location.href='/test'">
-	<div id="map" style="width:500px;height:400px;"></div>
-	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9bab934d8403bfc5089f416f519c865c"></script>
-	<script src="resources/static/js/map.js?ver=<%= timestamp %>"></script>
+	<div id="header_body">
+		<input type="button" value="Home" onClick="location.href='/test'">
+		<input type="button" value="Map" onClick="location.href='/test/map'">
+		<input type="button" value="MindMap" onClick="location.href='/test/mindMap'">
+		<input type="button" value="Ellipsis" onClick="location.href='/test/ellipsis'">
+		<input type="button" value="Search" onClick="location.href='/test/search'">
+		<input type="button" value="Slide" onClick="location.href='/test/slide_splide'">
+		<input type="button" value="FileDownload" onClick="location.href='/test/fileDownload'">
+	</div>
 </body>
 </html>
