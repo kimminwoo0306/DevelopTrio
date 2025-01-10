@@ -16,5 +16,7 @@
 <input type="button" value="mindMap로이동" onclick="location.href='/test/mindMap'">
 <input type="button" value="excel로이동" onclick="location.href='/test/excel'">
 <input type="button" value="ellipsis로이동" onclick="location.href='/test/ellipsis'">
+<input type="button" value="slide로이동" onclick="location.href='/test/slide'">
+<input type="button" value="slide_splide로이동" onclick="location.href='/test/slide_splide'">
 </body>
 </html>
