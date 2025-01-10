@@ -47,7 +47,7 @@
 	</div>
 	<input type="button" value="ajax¿äÃ»" onclick="test()">
 	<input type="button" value="Home" onClick="location.href='/test'">
-	<script src="resources/static/js/mindMap.js?ver=<%= timestamp %>"></script>
+	<script src="resources/static/js/mindMap.js"></script>
 	
 </body>
 </html>

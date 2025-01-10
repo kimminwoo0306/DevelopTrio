@@ -74,6 +74,7 @@ public class MainController {
 		list.add("인스타그램");
 		list.add("페이스북");
 		list.add("라인");
+		list.add("이렇게글자가긴SNS일경우에는뒤에...을 붙이려고합니다");
 
 		return list;
 

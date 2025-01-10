@@ -12,6 +12,9 @@
 <body>
 <div>메인페이지 입니다</div>
 <input type="button" value="map으로이동" onclick="location.href='/test/map'">
+<input type="button" value="search로이동" onclick="location.href='/test/search'">
+<input type="button" value="mindMap로이동" onclick="location.href='/test/mindMap'">
 <input type="button" value="excel로이동" onclick="location.href='/test/excel'">
+<input type="button" value="ellipsis로이동" onclick="location.href='/test/ellipsis'">
 </body>
 </html>
